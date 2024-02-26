@@ -25,8 +25,8 @@ export default function HomePage() {
     'use server'
 
     const boxJwtConfig = JwtConfig.fromConfigJsonString(process.env.BOX_CONFIG)
-    const boxJwtAuth = new BoxJwtAuth({ config: boxJwtConfig })
-    boxJwtAuth.asUser(process.env.BOX_APP_USER_ID)
+    const boxJwtAuth = await new BoxJwtAuth({ config: boxJwtConfig })
+      .asUser(process.env.BOX_APP_USER_ID)
 
     // Retrieve a token to avoid error: "No access token is available. Make an
     // API call to retrieve a token before calling this method."
