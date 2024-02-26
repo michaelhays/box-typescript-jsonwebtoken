@@ -1,6 +1,6 @@
 import BoxSDK from 'box-node-sdk'
-import { BoxJwtAuth, JwtConfig } from 'box-typescript-sdk-gen/lib/jwtAuth.generated.js'
-
+// import { BoxJwtAuth, JwtConfig } from 'box-typescript-sdk-gen/lib/jwtAuth.generated.js'
+const { BoxJwtAuth, JwtConfig } = await import('box-typescript-sdk-gen/lib/jwtAuth.generated.js')
 
 export default function HomePage() {
   async function boxGetTokenOld() {
