@@ -2,7 +2,7 @@
   "name": "box-typescript-jsonwebtoken",
   "version": "0.1.0",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
